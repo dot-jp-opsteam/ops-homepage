@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>今後の方針｜OPS — Operations Team</title>
+<meta name="description" content="OPSがこれから取り組む方針。全社カレンダー、ポータル開発、社内LLM・RAG、自動化とAI研修、将来構想、そして統合プラットフォームへ。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<!-- clecom風 有機ブロブのシェイプ定義（各装飾から #blobA/B/C を参照） -->
+<svg class="blob-defs" width="0" height="0" aria-hidden="true" focusable="false">
+  <defs>
+    <symbol id="blobA" viewBox="0 0 200 200"><path fill="currentColor" d="M158.5 41C179 62 181 99 169 128C157 157 128 176 97 177C64 178 30 161 18 129C7 99 16 60 44 39C72 18 138 20 158.5 41Z"/></symbol>
+    <symbol id="blobB" viewBox="0 0 200 200"><path fill="currentColor" d="M118 14C156 22 184 53 183 95C182 134 158 158 138 179C115 203 73 201 49 175C28 152 24 116 33 84C43 49 62 17 98 12C105 11 111 12 118 14Z"/></symbol>
+    <symbol id="blobC" viewBox="0 0 200 200"><path fill="currentColor" d="M44 66C64 33 106 20 146 31C186 42 201 78 189 110C180 134 197 166 167 181C134 197 88 193 57 175C27 158 11 121 21 94C26 81 34 74 44 66Z"/></symbol>
+  </defs>
+</svg>
+
+<!-- ===== HEADER ===== -->
+<header class="header">
+  <a href="future.html" class="header__logo">
+    <img src="images/OPS-logo.png" alt="OPS">
+    <span class="tag"><b>OPS</b>Operations Team / NPO Dot-JP</span>
+  </a>
+  <nav class="gnav">
+    <ul class="gnav__list">
+      <li><a href="../../index.html">Home<span class="ja">ホーム</span></a></li>
+      <li><a href="#" class="dummy">Message<span class="ja">ご挨拶</span></a></li>
+      <li><a href="future.html" class="current">Future<span class="ja">今後の方針</span></a></li>
+      <li><a href="contact.html">Contact<span class="ja">意見箱</span></a></li>
+    </ul>
+    <div class="gnav__cta">
+      <a href="contact.html">CONTACT<span class="ja">意見を送る</span></a>
+    </div>
+    <button class="gnav__btn" aria-label="メニュー"><span></span><span></span><span></span></button>
+  </nav>
+</header>
+
+<!-- ===== KV ===== -->
+<section class="page-kv">
+  <div class="guides" aria-hidden="true"><div class="guides__col"></div></div>
+  <svg class="blob b-lblue op-md sz-lg at-tl" viewBox="0 0 200 200" aria-hidden="true"><use href="#blobA"/></svg>
+  <svg class="blob b-pink op-md sz-sm at-br" viewBox="0 0 200 200" aria-hidden="true"><use href="#blobC"/></svg>
+  <div class="shooting-stars" aria-hidden="true">
+    <span class="star s1"></span><span class="star bl s2"></span><span class="star s3"></span>
+    <span class="star bl s4"></span><span class="star s5"></span>
+  </div>
+  <div class="marquee marquee--kv top" aria-hidden="true">
+    <div class="marquee__track">
+      <span>OPERATIONS · AUTOMATION · FUTURE · AI·RAG · PORTAL · CALENDAR · </span>
+      <span>OPERATIONS · AUTOMATION · FUTURE · AI·RAG · PORTAL · CALENDAR · </span>
+    </div>
+  </div>
+  <div class="marquee marquee--kv bottom rev" aria-hidden="true">
+    <div class="marquee__track">
+      <span>KNOWLEDGE · PLATFORM · ENABLEMENT · UPDATE · DOT-JP · OPS · </span>
+      <span>KNOWLEDGE · PLATFORM · ENABLEMENT · UPDATE · DOT-JP · OPS · </span>
+    </div>
+  </div>
+  <div class="container page-kv__inner">
+    <div class="page-kv__en">Future</div>
+    <div class="page-kv__jp">今後の方針</div>
+    <div class="breadcrumb"><a href="future.html">HOME</a><span class="sep">▼</span><span>FUTURE</span></div>
+  </div>
+</section>
+
+<!-- ===== INTRO ===== -->
+<section class="section">
+  <div class="guides" aria-hidden="true"><div class="guides__col"></div></div>
+  <div class="dot-field" aria-hidden="true"></div>
+  <svg class="blob b-lblue op-hi sz-lg at-tl" viewBox="0 0 200 200" aria-hidden="true"><use href="#blobB"/></svg>
+  <svg class="blob b-pink op-md sz-md at-br" viewBox="0 0 200 200" aria-hidden="true"><use href="#blobA"/></svg>
+  <div class="float-orbs" aria-hidden="true">
+    <span class="orb pk o1"></span><span class="orb bl o2"></span><span class="orb gr o3"></span>
+  </div>
+  <div class="shooting-stars" aria-hidden="true">
+    <span class="star s2"></span><span class="star bl s3"></span>
+  </div>
+  <div class="sunset-flock" aria-hidden="true">
+    <div class="sunset-bird b1">
+      <svg viewBox="0 0 40 26" role="img" aria-hidden="true">
+        <path class="bird-wing bird-wing--l" d="M20 13 C 13 6, 7 6, 2 11"/>
+        <path class="bird-wing bird-wing--r" d="M20 13 C 27 6, 33 6, 38 11"/>
+      </svg>
+    </div>
+    <div class="sunset-bird b2">
+      <svg viewBox="0 0 40 26" role="img" aria-hidden="true">
+        <path class="bird-wing bird-wing--l" d="M20 13 C 13 6, 7 6, 2 11"/>
+        <path class="bird-wing bird-wing--r" d="M20 13 C 27 6, 33 6, 38 11"/>
+      </svg>
+    </div>
+  </div>
+  <div class="container">
+    <div class="intro reveal deco-host">
+      <div class="orb-cluster" aria-hidden="true">
+        <span class="bubble p1"></span>
+        <span class="bubble p2"></span>
+        <button class="theme-orb p3" type="button" aria-label="装飾" title=""></button>
+        <span class="bubble p4"></span>
+        <span class="bubble p5"></span>
+      </div>
+      <div class="ttl ttl--center">
+        <span class="en">Future Direction</span>
+        <span class="jp">バラバラのツールを、<span class="hl">ひとつの体験へ。</span></span>
+      </div>
+      <p class="lead lead--center">OPSは、運営を支える仕組みを一つずつ着実に開発・運用していきます。短期の改善から将来の構想まで、AIとITの力で「人がやるべき仕事に時間を使える組織」へとアップデートします。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 方針タブ（クリックで切替） ===== -->
+<section class="section section--soft">
+  <div class="guides" aria-hidden="true"><div class="guides__col"></div></div>
+  <div class="dot-field" aria-hidden="true"></div>
+  <svg class="blob b-blue op-lo sz-xl at-br" viewBox="0 0 200 200" aria-hidden="true"><use href="#blobC"/></svg>
+  <svg class="blob b-lblue op-md sz-md at-tl" viewBox="0 0 200 200" aria-hidden="true"><use href="#blobA"/></svg>
+  <span class="deco-line bl d2"></span>
+  <div class="shooting-stars" aria-hidden="true">
+    <span class="star s1"></span><span class="star bl s2"></span><span class="star s4"></span>
+  </div>
+  <div class="marquee marquee--sec top rev" aria-hidden="true">
+    <div class="marquee__track">
+      <span>CALENDAR · PORTAL · AI·RAG · AUTOMATION · FUTURE · </span>
+      <span>CALENDAR · PORTAL · AI·RAG · AUTOMATION · FUTURE · </span>
+    </div>
+  </div>
+  <div class="container">
+    <div class="ttl ttl--center reveal">
+      <span class="en">Our Direction</span>
+      <span class="jp">OPSが進める、<span class="hl">5つの方針。</span></span>
+    </div>
+    <p class="lead lead--center reveal">順番ではなく、どれも同時に育てていく5つの方針です。にじみ合うように、組織全体を少しずつ前へ。</p>
+
+    <div class="wash-field reveal d1">
+
+      <div class="wash reveal">
+        <div class="wash__bloom" aria-hidden="true"></div>
+        <div class="wash__icon"><svg class="glyph" viewBox="0 0 24 24" role="img" aria-hidden="true"><rect x="3" y="4.5" width="18" height="16" rx="2.5"/><path d="M3 9h18"/><path d="M8 2.5v4M16 2.5v4"/><path d="M7 13h2M11 13h2M15 13h2M7 16.5h2M11 16.5h2"/></svg></div>
+        <p class="wash__en">Calendar</p>
+        <h3 class="wash__title">全社カレンダーの定着・拡張</h3>
+        <p class="wash__text">全社のイベント・会議・締切を、ひとつのカレンダーに集約。部署や立場を越えて同じ予定を共有でき、伝達漏れを防ぎます。今後はリマインドや出欠管理へと運用を広げます。</p>
+        <div class="wash__tags"><span>全社予定</span><span>情報の一元化</span></div>
+      </div>
+
+      <div class="wash reveal">
+        <div class="wash__bloom" aria-hidden="true"></div>
+        <div class="wash__icon"><svg class="glyph" viewBox="0 0 24 24" role="img" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2.5"/><path d="M3 8.5h18"/><circle cx="5.6" cy="6.2" r=".5" fill="#fff" stroke="none"/><circle cx="7.4" cy="6.2" r=".5" fill="#fff" stroke="none"/><path d="M7 12.5h4M7 16h6"/><path d="M14.5 12h3.5v5h-3.5z"/></svg></div>
+        <p class="wash__en">Portal</p>
+        <h3 class="wash__title">ポータル／学生管理システム</h3>
+        <p class="wash__text">バラバラのツールや資料を、ひとつの入り口にまとめます。あわせて学生管理システムを開発し、参加状況や連絡先も一元管理。「どこを見ればいいか分からない」を解消します。</p>
+        <div class="wash__tags"><span>学生管理</span><span>ポータル</span></div>
+      </div>
+
+      <div class="wash reveal">
+        <div class="wash__bloom" aria-hidden="true"></div>
+        <div class="wash__icon"><svg class="glyph" viewBox="0 0 24 24" role="img" aria-hidden="true"><rect x="7" y="7" width="10" height="10" rx="2"/><path d="M10.5 11h3M10.5 13.5h3" opacity=".85"/><path d="M9.5 2.5v3M14.5 2.5v3M9.5 18.5v3M14.5 18.5v3M2.5 9.5h3M2.5 14.5h3M18.5 9.5h3M18.5 14.5h3"/></svg></div>
+        <p class="wash__en">AI · RAG</p>
+        <h3 class="wash__title">社内LLM・RAGのナレッジ基盤</h3>
+        <p class="wash__text">社内LLM・RAGで、過去の資料やノウハウを自然な言葉ですぐ検索できる基盤をつくります。属人化をなくし、新メンバーの立ち上がりや引き継ぎをスムーズにします。</p>
+        <div class="wash__tags"><span>社内LLM</span><span>引き継ぎもスムーズ</span></div>
+      </div>
+
+      <div class="wash reveal">
+        <div class="wash__bloom" aria-hidden="true"></div>
+        <div class="wash__icon"><svg class="glyph" viewBox="0 0 24 24" role="img" aria-hidden="true"><circle cx="12" cy="12" r="3.2"/><path d="M12 2.5v3M12 18.5v3M2.5 12h3M18.5 12h3M5 5l2.1 2.1M16.9 16.9 19 19M19 5l-2.1 2.1M7.1 16.9 5 19"/></svg></div>
+        <p class="wash__en">Automation</p>
+        <h3 class="wash__title">自動化とスタッフ向けAI研修</h3>
+        <p class="wash__text">自動リマインドや定型作業の自動化で、ミスと手間を削減します。あわせてスタッフ向けのAI研修を実施し、組織全体のリテラシーを底上げします。</p>
+        <div class="wash__tags"><span>自動リマインド</span><span>AI研修</span></div>
+      </div>
+
+      <div class="wash reveal">
+        <div class="wash__bloom" aria-hidden="true"></div>
+        <div class="wash__icon"><svg class="glyph" viewBox="0 0 24 24" role="img" aria-hidden="true"><path d="M12 2.5c3 2 4.5 5.2 4.5 9 0 1.8-.4 3.4-1 4.8H8.5c-.6-1.4-1-3-1-4.8 0-3.8 1.5-7 4.5-9z"/><circle cx="12" cy="9.5" r="1.6"/><path d="M8.5 16.3 6 19.5l3.2-1M15.5 16.3 18 19.5l-3.2-1"/><path d="M10.5 19.5c.5 1 1.5 2 1.5 2s1-1 1.5-2"/></svg></div>
+        <p class="wash__en">Future Stack</p>
+        <h3 class="wash__title">将来構想 — 次の業務基盤へ</h3>
+        <p class="wash__text">Salesforceに代わる、OPS独自の管理基盤を構想しています。これまでの資産も活かしながら、数年先を見据えた持続可能な仕組みを目指します。</p>
+        <div class="wash__tags"><span>独自基盤</span><span>NFT活用</span></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===== 統合プラットフォーム（Future） ===== -->
+<section class="section section--blue">
+  <div class="float-orbs" aria-hidden="true">
+    <span class="orb pk o1"></span><span class="orb bl o2"></span>
+  </div>
+  <div class="shooting-stars" aria-hidden="true">
+    <span class="star s1"></span><span class="star bl s3"></span><span class="star s5"></span>
+  </div>
+  <div class="container platform">
+    <div class="ttl ttl--center reveal">
+      <span class="en">Integrated Platform</span>
+      <span class="jp">最終的に目指す、<span class="hl">統合プラットフォーム。</span></span>
+    </div>
+    <p class="lead lead--center reveal">運営に必要な機能が、ひとつにまとまった体験へ。OPSが描く未来像です。</p>
+    <div class="platform__hub reveal d1">
+      <span data-desc="インターン参加学生の情報や進捗を一元管理。">学生管理</span>
+      <span data-desc="受け入れ企業・団体の情報と連絡をまとめて整理。">クライアント管理</span>
+      <span data-desc="全社の予定とイベントをひと目で把握。">スケジュール管理</span>
+      <span data-desc="チーム内のやり取りをひとつの場所に集約。">チャット</span>
+      <span data-desc="契約・同意の手続きをオンラインで完結。">電子署名</span>
+      <span data-desc="締切や対応漏れを自動で通知。">リマインド</span>
+      <span data-desc="日々の活動ログを残し、振り返りに活用。">活動記録</span>
+      <span data-desc="必要な資料・知見をすぐに検索。">社内ナレッジ検索</span>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CTA ===== -->
+<section class="section cta-band">
+  <div class="marquee marquee--cta r1" aria-hidden="true"><div class="marquee__track">
+    <span>YOUR VOICE · YOUR IDEAS · WE'RE LISTENING · SHARE YOUR THOUGHTS · FEEDBACK · </span>
+    <span>YOUR VOICE · YOUR IDEAS · WE'RE LISTENING · SHARE YOUR THOUGHTS · FEEDBACK · </span>
+  </div></div>
+  <div class="marquee marquee--cta r2" aria-hidden="true"><div class="marquee__track">
+    <span>TELL US ANYTHING · YOUR OPINION MATTERS · IDEAS WELCOME · </span>
+    <span>TELL US ANYTHING · YOUR OPINION MATTERS · IDEAS WELCOME · </span>
+  </div></div>
+  <div class="marquee marquee--cta r3" aria-hidden="true"><div class="marquee__track">
+    <span>SPEAK UP · WE HEAR YOU · YOUR VOICE · FEEDBACK · IDEAS · </span>
+    <span>SPEAK UP · WE HEAR YOU · YOUR VOICE · FEEDBACK · IDEAS · </span>
+  </div></div>
+  <div class="shooting-stars" aria-hidden="true">
+    <span class="star s1"></span><span class="star bl s4"></span>
+  </div>
+  <div class="container cta-band__inner">
+    <span class="en">Let's Work Together!</span>
+    <h2>「自動化したい」を、教えてください。</h2>
+    <p style="white-space:nowrap">あなたの困りごとが、次の方針になります。ご意見・ご提案をお気軽にどうぞ。</p>
+    <div class="cta-band__btns">
+      <a href="contact.html" class="btn btn--grad">意見を送る<span class="arrow">→</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
+  <div class="guides" aria-hidden="true"><div class="guides__col"></div></div>
+  <div class="shooting-stars" aria-hidden="true">
+    <span class="star s2"></span><span class="star bl s4"></span>
+  </div>
+  <div class="container">
+    <div class="footer__top">
+      <div class="footer__brand">
+        <img src="images/OPS-logo.png" alt="OPS">
+        <p>OPS（Operations）は、NPO法人ドットジェイピーの運営を仕組み化する横断チームです。AIとITで、人がやるべき仕事に時間を使える組織をつくります。</p>
+      </div>
+      <div class="footer__col">
+        <h4>Menu</h4>
+        <a href="future.html">Future / 今後の方針</a>
+        <a href="contact.html">Contact / 意見箱</a>
+      </div>
+      <div class="footer__col">
+        <h4>Team</h4>
+        <span class="dim">NPO法人ドットジェイピー</span>
+        <span class="dim">2026年4月 正式始動</span>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span class="copy">© 2026 OPS — Operations Team, NPO Dot-JP</span>
+      <span>AIとITで、運営をアップデートする。</span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/main.js"></script>
+</body>
+</html>
