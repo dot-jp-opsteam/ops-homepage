@@ -1,163 +1,282 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Mission — OPS Team</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/style-kouhei.css" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>存在意義｜OPS — Operations Team</title>
+<meta name="description" content="OPSの存在意義。想いを動かすのは人、その人を支えるのは仕組み。なぜOPSチームが必要なのか、そして始まりのストーリー。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style-leandro.css">
 </head>
 <body>
 
-  <!-- 仮の簡易ナビ（最終的に共通ヘッダーへ統一する予定の暫定対応） -->
-  <p style="padding:12px 20px;margin:0;font-family:sans-serif;">
-    <a href="index.html">← OPSトップへ戻る</a>
-  </p>
+<!-- clecom風 有機ブロブのシェイプ定義（各装飾から #blobA/B/C を参照） -->
+<svg class="blob-defs" width="0" height="0" aria-hidden="true" focusable="false">
+  <defs>
+    <symbol id="blobA" viewBox="0 0 200 200"><path fill="currentColor" d="M158.5 41C179 62 181 99 169 128C157 157 128 176 97 177C64 178 30 161 18 129C7 99 16 60 44 39C72 18 138 20 158.5 41Z"/></symbol>
+    <symbol id="blobB" viewBox="0 0 200 200"><path fill="currentColor" d="M118 14C156 22 184 53 183 95C182 134 158 158 138 179C115 203 73 201 49 175C28 152 24 116 33 84C43 49 62 17 98 12C105 11 111 12 118 14Z"/></symbol>
+    <symbol id="blobC" viewBox="0 0 200 200"><path fill="currentColor" d="M44 66C64 33 106 20 146 31C186 42 201 78 189 110C180 134 197 166 167 181C134 197 88 193 57 175C27 158 11 121 21 94C26 81 34 74 44 66Z"/></symbol>
+  </defs>
+</svg>
 
-  <main>
-    <section id="mission">
+<!-- ===== HEADER（全ページ共通／このページは Mission を current で強調） ===== -->
+<header class="header">
+  <a href="index.html" class="header__logo">
+    <img src="images/OPS-logo.png" alt="OPS">
+    <span class="tag"><b>OPS</b>Operations Team / NPO Dot-JP</span>
+  </a>
+  <nav class="gnav">
+    <ul class="gnav__list">
+      <li><a href="mission.html" class="current">Mission<span class="ja">存在意義</span></a></li>
+      <li><a href="members.html">Members<span class="ja">メンバー</span></a></li>
+      <li><a href="activities.html">Activities<span class="ja">活動</span></a></li>
+      <li><a href="works.html">Works<span class="ja">成果物</span></a></li>
+      <li><a href="future.html">Future<span class="ja">今後の方針</span></a></li>
+      <li><a href="contact.html">Contact<span class="ja">意見箱</span></a></li>
+    </ul>
+    <div class="gnav__cta">
+      <a href="contact.html">CONTACT<span class="ja">意見を送る</span></a>
+    </div>
+    <button class="gnav__btn" aria-label="メニュー"><span></span><span></span><span></span></button>
+  </nav>
+</header>
 
-      <!-- パート1：メインビジョン -->
-      <div class="mission-panel mission-panel--1">
-        <div class="mission-panel__slides">
-          <div class="mission-slide is-active" style="background-image:url('images/ChatGPT_ops_hp_01.png')"></div>
-          <div class="mission-slide" style="background-image:url('images/ChatGPT_ops_hp_02.png')"></div>
-          <div class="mission-slide" style="background-image:url('images/ChatGPT_ops_hp_03.png')"></div>
-          <div class="mission-slide" style="background-image:url('images/ChatGPT_ops_hp_04.png')"></div>
-        </div>
-        <div class="mission-panel__overlay"></div>
-        <div class="hero__bg-grid"></div>
-        <div class="l-container mission-panel__inner">
-          <div class="hero__tag">
-            <span class="hero__tag-dot"></span>
-            Operations Team
-          </div>
-          <h1 class="mission-panel__catchcopy">
-            <span class="mission-em">想いを動かすのは、人。</span><br />
-            <span class="mission-em">その人を支えるのは、仕組み。</span>
-          </h1>
-          <div class="mission-panel__body">
-            <p>学生と向き合い、挑戦を後押しする。<br />それはスタッフにしかできない仕事。</p>
-            <p>だからこそ、私たちは活動を支える仕組みを整える。<br />
-            業務に追われる時間を減らし、学生と向き合う時間を増やす。<br />
-            一人ひとりが本来の役割に集中できる環境をつくり、<br />プログラムの価値を高めていく。</p>
-            <p>OPSチームは、テクノロジーと仕組みの力で、<br />団体の可能性を広げる。</p>
-          </div>
-        </div>
-        <div class="mission-panel__indicators">
-          <span class="mission-indicator is-active"></span>
-          <span class="mission-indicator"></span>
-          <span class="mission-indicator"></span>
-          <span class="mission-indicator"></span>
-        </div>
+<!-- ===== KV（ページ見出し帯） ===== -->
+<section class="page-kv">
+  <div class="guides" aria-hidden="true"><div class="guides__col"></div></div>
+  <svg class="blob b-lblue op-md sz-lg at-tl" viewBox="0 0 200 200" aria-hidden="true"><use href="#blobA"/></svg>
+  <svg class="blob b-pink op-md sz-sm at-br" viewBox="0 0 200 200" aria-hidden="true"><use href="#blobC"/></svg>
+  <div class="shooting-stars" aria-hidden="true">
+    <span class="star s1"></span><span class="star bl s2"></span><span class="star s3"></span>
+    <span class="star bl s4"></span><span class="star s5"></span>
+  </div>
+  <div class="marquee marquee--kv top" aria-hidden="true">
+    <div class="marquee__track">
+      <span>MISSION · PURPOSE · PEOPLE · SYSTEM · WHY OPS · STORY · </span>
+      <span>MISSION · PURPOSE · PEOPLE · SYSTEM · WHY OPS · STORY · </span>
+    </div>
+  </div>
+  <div class="marquee marquee--kv bottom rev" aria-hidden="true">
+    <div class="marquee__track">
+      <span>SPEAK UP · ENABLEMENT · VALUE · DOT-JP · OPS · </span>
+      <span>SPEAK UP · ENABLEMENT · VALUE · DOT-JP · OPS · </span>
+    </div>
+  </div>
+  <div class="container page-kv__inner">
+    <div class="page-kv__en">Mission</div>
+    <div class="page-kv__jp">存在意義</div>
+    <div class="breadcrumb"><a href="index.html">HOME</a><span class="sep">▼</span><span>MISSION</span></div>
+  </div>
+</section>
+
+<!-- ===== INTRO（ビジョン） ===== -->
+<section class="section">
+  <div class="guides" aria-hidden="true"><div class="guides__col"></div></div>
+  <div class="dot-field" aria-hidden="true"></div>
+  <svg class="blob b-lblue op-hi sz-lg at-tl" viewBox="0 0 200 200" aria-hidden="true"><use href="#blobB"/></svg>
+  <svg class="blob b-pink op-md sz-md at-br" viewBox="0 0 200 200" aria-hidden="true"><use href="#blobA"/></svg>
+  <div class="float-orbs" aria-hidden="true">
+    <span class="orb pk o1"></span><span class="orb bl o2"></span><span class="orb gr o3"></span>
+  </div>
+  <div class="shooting-stars" aria-hidden="true">
+    <span class="star s2"></span><span class="star bl s3"></span>
+  </div>
+  <div class="container">
+    <div class="intro reveal deco-host">
+      <div class="ttl ttl--center">
+        <span class="en">Our Mission</span>
+        <span class="jp">想いを動かすのは、人。<span class="hl">その人を支えるのは、仕組み。</span></span>
+      </div>
+      <p class="lead lead--center">学生と向き合い、挑戦を後押しする。それはスタッフにしかできない仕事です。だからこそ私たちは、活動を支える仕組みを整える。業務に追われる時間を減らし、学生と向き合う時間を増やす。一人ひとりが本来の役割に集中できる環境をつくり、プログラムの価値を高めていきます。OPSチームは、テクノロジーと仕組みの力で、団体の可能性を広げます。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== なぜOPSが必要なのか（課題） ===== -->
+<section class="section section--soft">
+  <div class="guides" aria-hidden="true"><div class="guides__col"></div></div>
+  <div class="dot-field" aria-hidden="true"></div>
+  <svg class="blob b-blue op-lo sz-xl at-br" viewBox="0 0 200 200" aria-hidden="true"><use href="#blobC"/></svg>
+  <svg class="blob b-lblue op-md sz-md at-tl" viewBox="0 0 200 200" aria-hidden="true"><use href="#blobA"/></svg>
+  <span class="deco-line bl d2"></span>
+  <div class="shooting-stars" aria-hidden="true">
+    <span class="star s1"></span><span class="star bl s2"></span><span class="star s4"></span>
+  </div>
+  <div class="marquee marquee--sec top rev" aria-hidden="true">
+    <div class="marquee__track">
+      <span>WHY OPS · ADMIN WORK · SCATTERED INFO · DIFFERENT FLOWS · </span>
+      <span>WHY OPS · ADMIN WORK · SCATTERED INFO · DIFFERENT FLOWS · </span>
+    </div>
+  </div>
+  <div class="container">
+    <div class="ttl ttl--center reveal">
+      <span class="en">Why OPS?</span>
+      <span class="jp">なぜ、<span class="hl">OPSチームが必要なのか。</span></span>
+    </div>
+    <p class="lead lead--center reveal">全国で多くの学生とスタッフが活動しています。その一方で、活動を支える業務には多くの時間と労力がかかっています。</p>
+
+    <div class="wash-field reveal d1">
+
+      <div class="wash reveal">
+        <div class="wash__bloom" aria-hidden="true"></div>
+        <div class="wash__icon"><svg class="glyph" viewBox="0 0 24 24" role="img" aria-hidden="true"><path d="M6 3h9l3 3v15H6z"/><path d="M14.5 3v3.5H18"/><path d="M9 12h6M9 15h6M9 9h3"/></svg></div>
+        <p class="wash__en">Admin Work</p>
+        <h3 class="wash__title">学生情報の管理や各種事務作業</h3>
+        <p class="wash__text">名簿の管理や申請対応など、こまかな事務作業に多くの時間が取られています。</p>
+        <div class="wash__tags"><span>事務負担</span><span>時間消費</span></div>
       </div>
 
-      <!-- パート2：なぜOPSチームが必要なのか -->
-      <div class="mission-why">
-        <div class="l-container">
-
-          <div class="mission-why__lead-row js-reveal">
-            <div class="mission-why__lead-text">
-              <span class="section-header__eyebrow">Why OPS?</span>
-              <h2 class="mission-why__title">
-                <span class="mission-em">なぜOPSチームが<br />必要なのか</span>
-              </h2>
-              <p class="mission-why__desc">
-                全国で多くの学生とスタッフが活動している。<br />
-                その一方で、活動を支える業務には<br />多くの時間と労力がかかっている。
-              </p>
-            </div>
-            <div class="mission-why__lead-illust">
-              <img src="images/illust_working01.png" alt="業務に追われるスタッフ" />
-            </div>
-          </div>
-
-          <div class="mission-why__issues">
-            <div class="mission-issue js-reveal js-reveal-delay-1">
-              <div class="mission-issue__img">
-                <img src="images/illust_file.png" alt="学生情報の管理" />
-              </div>
-              <p class="mission-issue__label">学生情報の管理や各種事務作業</p>
-            </div>
-            <div class="mission-issue js-reveal js-reveal-delay-2">
-              <div class="mission-issue__img">
-                <img src="images/illust_searching.png" alt="情報共有の分散" />
-              </div>
-              <p class="mission-issue__label">複数のツールや媒体に分散した情報共有</p>
-            </div>
-            <div class="mission-issue js-reveal js-reveal-delay-3">
-              <div class="mission-issue__img">
-                <img src="images/illust_dispersed.png" alt="業務フローの違い" />
-              </div>
-              <p class="mission-issue__label">個人や支部ごとに異なるAI活用や業務フロー</p>
-            </div>
-          </div>
-
-          <div class="mission-why__goal-row js-reveal">
-            <div class="mission-why__goal-illust">
-              <img src="images/illust_conversation.png" alt="学生と向き合う時間" />
-            </div>
-            <div class="mission-why__goal-text">
-              <div class="mission-why__arrow-box">
-                こうした課題は、スタッフが本来注力すべき<br />
-                <strong>「学生と向き合う時間」</strong>を奪ってしまう。
-              </div>
-              <p class="mission-why__goal-desc">
-                目指すのは効率化そのものではない。<br />
-                より多くの時間を学生との対話やプログラム設計に使い、<br />
-                挑戦を支える環境を実現すること。<br />
-                仕組みを整えることで、<strong>人にしかできない価値を最大化する。</strong>
-              </p>
-            </div>
-          </div>
-
-        </div>
+      <div class="wash reveal">
+        <div class="wash__bloom" aria-hidden="true"></div>
+        <div class="wash__icon"><svg class="glyph" viewBox="0 0 24 24" role="img" aria-hidden="true"><circle cx="6" cy="6" r="2.2"/><circle cx="18" cy="6" r="2.2"/><circle cx="12" cy="18" r="2.2"/><path d="M7.5 7.5 11 15M16.5 7.5 13 15M8 6h8"/></svg></div>
+        <p class="wash__en">Scattered Info</p>
+        <h3 class="wash__title">複数ツールに分散した情報共有</h3>
+        <p class="wash__text">情報があちこちの媒体に散らばり、「どこを見ればいいか分からない」が起きています。</p>
+        <div class="wash__tags"><span>情報分散</span><span>伝達漏れ</span></div>
       </div>
 
-      <!-- パート3：始まりのストーリー -->
-      <div class="mission-story l-section--dark js-reveal">
-        <div class="l-container">
-          <div class="mission-story__inner">
-            <span class="section-header__eyebrow" style="color:var(--color-accent);background:rgba(0,170,255,0.12)">Story</span>
-            <h2 class="mission-story__title">
-              <span class="mission-em">始まりは、Speak up！コンテスト</span>
-            </h2>
-            <p class="mission-story__lead">56期 Speak up！コンテスト 優勝者・久米悠雅の提案をきっかけに。</p>
-            <div class="mission-steps">
-              <div class="mission-step js-reveal js-reveal-delay-1">
-                <div class="mission-step__num">STEP 01</div>
-                <div class="mission-step__content">
-                  <h3 class="mission-step__title">56期 全社会</h3>
-                  <p>業務効率化に関する提案を、Speak up！コンテストで発表。</p>
-                </div>
-              </div>
-              <div class="mission-step__arrow js-reveal js-reveal-delay-2">→</div>
-              <div class="mission-step js-reveal js-reveal-delay-2">
-                <div class="mission-step__num">STEP 02</div>
-                <div class="mission-step__content">
-                  <h3 class="mission-step__title">提案後</h3>
-                  <p>学生代表・木家さんが有志メンバーを募集。</p>
-                </div>
-              </div>
-              <div class="mission-step__arrow js-reveal js-reveal-delay-3">→</div>
-              <div class="mission-step js-reveal js-reveal-delay-3">
-                <div class="mission-step__num">STEP 03</div>
-                <div class="mission-step__content">
-                  <h3 class="mission-step__title">2026年4月</h3>
-                  <p>OPSチームとして、正式に始動。</p>
-                </div>
-              </div>
-            </div>
-            <p class="mission-story__tagline js-reveal">一つの業務効率化提案が、全社を変えるプロジェクトへ。</p>
-          </div>
-        </div>
+      <div class="wash reveal">
+        <div class="wash__bloom" aria-hidden="true"></div>
+        <div class="wash__icon"><svg class="glyph" viewBox="0 0 24 24" role="img" aria-hidden="true"><circle cx="6" cy="12" r="2.2"/><circle cx="18" cy="6" r="2.2"/><circle cx="18" cy="18" r="2.2"/><path d="M8 11 16 6.5M8 13l8 4.5"/></svg></div>
+        <p class="wash__en">Different Flows</p>
+        <h3 class="wash__title">個人・支部ごとに異なる業務フロー</h3>
+        <p class="wash__text">AI活用や作業の進め方が人によってバラバラで、品質や引き継ぎに差が生まれています。</p>
+        <div class="wash__tags"><span>属人化</span><span>バラつき</span></div>
       </div>
 
-    </section>
-  </main>
+    </div>
+  </div>
+</section>
 
-  <script src="js/main-kouhei.js"></script>
+<!-- ===== 目指すもの ===== -->
+<section class="section section--blue">
+  <div class="float-orbs" aria-hidden="true">
+    <span class="orb pk o1"></span><span class="orb bl o2"></span>
+  </div>
+  <div class="shooting-stars" aria-hidden="true">
+    <span class="star s1"></span><span class="star bl s3"></span><span class="star s5"></span>
+  </div>
+  <div class="container">
+    <div class="ttl ttl--center reveal">
+      <span class="en">What We Aim For</span>
+      <span class="jp">人にしかできない価値を、<span class="hl">最大化する。</span></span>
+    </div>
+    <p class="lead lead--center reveal">こうした課題は、スタッフが本来注力すべき「学生と向き合う時間」を奪ってしまいます。目指すのは効率化そのものではありません。より多くの時間を学生との対話やプログラム設計に使い、挑戦を支える環境を実現すること。仕組みを整えることで、人にしかできない価値を最大化します。</p>
+  </div>
+</section>
+
+<!-- ===== 始まりのストーリー ===== -->
+<section class="section">
+  <div class="guides" aria-hidden="true"><div class="guides__col"></div></div>
+  <div class="dot-field" aria-hidden="true"></div>
+  <svg class="blob b-pink op-md sz-lg at-tl" viewBox="0 0 200 200" aria-hidden="true"><use href="#blobB"/></svg>
+  <svg class="blob b-lblue op-md sz-md at-br" viewBox="0 0 200 200" aria-hidden="true"><use href="#blobC"/></svg>
+  <div class="shooting-stars" aria-hidden="true">
+    <span class="star s2"></span><span class="star bl s3"></span>
+  </div>
+  <div class="container">
+    <div class="ttl ttl--center reveal">
+      <span class="en">Our Story</span>
+      <span class="jp">始まりは、<span class="hl">Speak up！コンテスト。</span></span>
+    </div>
+    <p class="lead lead--center reveal">56期 Speak up！コンテスト 優勝者・久米悠雅の提案をきっかけに。一つの業務効率化提案が、全社を変えるプロジェクトへ。</p>
+
+    <div class="wash-field reveal d1">
+
+      <div class="wash reveal">
+        <div class="wash__bloom" aria-hidden="true"></div>
+        <div class="wash__icon"><svg class="glyph" viewBox="0 0 24 24" role="img" aria-hidden="true"><path d="M5 17V8a2 2 0 0 1 2-2h6l4 4v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2z"/><path d="M9 11h6M9 14h4"/></svg></div>
+        <p class="wash__en">Step 01</p>
+        <h3 class="wash__title">56期 全社会</h3>
+        <p class="wash__text">業務効率化に関する提案を、Speak up！コンテストで発表しました。</p>
+        <div class="wash__tags"><span>提案・発表</span></div>
+      </div>
+
+      <div class="wash reveal">
+        <div class="wash__bloom" aria-hidden="true"></div>
+        <div class="wash__icon"><svg class="glyph" viewBox="0 0 24 24" role="img" aria-hidden="true"><circle cx="9" cy="8" r="2.6"/><circle cx="16" cy="9" r="2.2"/><path d="M4 19c0-2.8 2.2-5 5-5s5 2.2 5 5M14.5 14.5c2.4.2 4.5 2 4.5 4.5"/></svg></div>
+        <p class="wash__en">Step 02</p>
+        <h3 class="wash__title">提案後</h3>
+        <p class="wash__text">学生代表・木家さんが、有志メンバーを募集しました。</p>
+        <div class="wash__tags"><span>仲間集め</span></div>
+      </div>
+
+      <div class="wash reveal">
+        <div class="wash__bloom" aria-hidden="true"></div>
+        <div class="wash__icon"><svg class="glyph" viewBox="0 0 24 24" role="img" aria-hidden="true"><path d="M12 2.5c3 2 4.5 5.2 4.5 9 0 1.8-.4 3.4-1 4.8H8.5c-.6-1.4-1-3-1-4.8 0-3.8 1.5-7 4.5-9z"/><circle cx="12" cy="9.5" r="1.6"/><path d="M9.5 19c.5 1 1.5 2 2.5 2s2-1 2.5-2"/></svg></div>
+        <p class="wash__en">Step 03</p>
+        <h3 class="wash__title">2026年4月</h3>
+        <p class="wash__text">OPSチームとして、正式に始動しました。</p>
+        <div class="wash__tags"><span>正式始動</span></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===== CTA ===== -->
+<section class="section cta-band">
+  <div class="marquee marquee--cta r1" aria-hidden="true"><div class="marquee__track">
+    <span>YOUR VOICE · YOUR IDEAS · WE'RE LISTENING · SHARE YOUR THOUGHTS · FEEDBACK · </span>
+    <span>YOUR VOICE · YOUR IDEAS · WE'RE LISTENING · SHARE YOUR THOUGHTS · FEEDBACK · </span>
+  </div></div>
+  <div class="marquee marquee--cta r2" aria-hidden="true"><div class="marquee__track">
+    <span>TELL US ANYTHING · YOUR OPINION MATTERS · IDEAS WELCOME · </span>
+    <span>TELL US ANYTHING · YOUR OPINION MATTERS · IDEAS WELCOME · </span>
+  </div></div>
+  <div class="marquee marquee--cta r3" aria-hidden="true"><div class="marquee__track">
+    <span>SPEAK UP · WE HEAR YOU · YOUR VOICE · FEEDBACK · IDEAS · </span>
+    <span>SPEAK UP · WE HEAR YOU · YOUR VOICE · FEEDBACK · IDEAS · </span>
+  </div></div>
+  <div class="shooting-stars" aria-hidden="true">
+    <span class="star s1"></span><span class="star bl s4"></span>
+  </div>
+  <div class="container cta-band__inner">
+    <span class="en">Join Our Mission!</span>
+    <h2>その想い、一緒に仕組みにしませんか。</h2>
+    <p style="white-space:nowrap">あなたの「こうなったらいいな」が、OPSの次の一歩になります。</p>
+    <div class="cta-band__btns">
+      <a href="contact.html" class="btn btn--grad">意見を送る<span class="arrow">→</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER（全ページ共通） ===== -->
+<footer class="footer">
+  <div class="guides" aria-hidden="true"><div class="guides__col"></div></div>
+  <div class="shooting-stars" aria-hidden="true">
+    <span class="star s2"></span><span class="star bl s4"></span>
+  </div>
+  <div class="container">
+    <div class="footer__top">
+      <div class="footer__brand">
+        <img src="images/OPS-logo.png" alt="OPS">
+        <p>OPS（Operations）は、NPO法人ドットジェイピーの運営を仕組み化する横断チームです。AIとITで、人がやるべき仕事に時間を使える組織をつくります。</p>
+      </div>
+      <div class="footer__col">
+        <h4>Menu</h4>
+        <a href="mission.html">Mission / 存在意義</a>
+        <a href="members.html">Members / メンバー</a>
+        <a href="activities.html">Activities / 活動</a>
+        <a href="works.html">Works / 成果物</a>
+        <a href="future.html">Future / 今後の方針</a>
+        <a href="contact.html">Contact / 意見箱</a>
+      </div>
+      <div class="footer__col">
+        <h4>Team</h4>
+        <span class="dim">NPO法人ドットジェイピー</span>
+        <span class="dim">2026年4月 正式始動</span>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span class="copy">© 2026 OPS — Operations Team, NPO Dot-JP</span>
+      <span>AIとITで、運営をアップデートする。</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main-leandro.js"></script>
 </body>
 </html>

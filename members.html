@@ -1,103 +1,216 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Members — OPS Team</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/style-kouhei.css" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>メンバー｜OPS — Operations Team</title>
+<meta name="description" content="OPSのメンバー紹介。クリックすると各メンバーの詳細プロフィールへ移動します。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style-leandro.css">
 </head>
 <body>
 
-  <!-- 仮の簡易ナビ（最終的に共通ヘッダーへ統一する予定の暫定対応） -->
-  <p style="padding:12px 20px;margin:0;font-family:sans-serif;">
-    <a href="index.html">← OPSトップへ戻る</a>
-  </p>
+<!-- clecom風 有機ブロブのシェイプ定義（各装飾から #blobA/B/C を参照） -->
+<svg class="blob-defs" width="0" height="0" aria-hidden="true" focusable="false">
+  <defs>
+    <symbol id="blobA" viewBox="0 0 200 200"><path fill="currentColor" d="M158.5 41C179 62 181 99 169 128C157 157 128 176 97 177C64 178 30 161 18 129C7 99 16 60 44 39C72 18 138 20 158.5 41Z"/></symbol>
+    <symbol id="blobB" viewBox="0 0 200 200"><path fill="currentColor" d="M118 14C156 22 184 53 183 95C182 134 158 158 138 179C115 203 73 201 49 175C28 152 24 116 33 84C43 49 62 17 98 12C105 11 111 12 118 14Z"/></symbol>
+    <symbol id="blobC" viewBox="0 0 200 200"><path fill="currentColor" d="M44 66C64 33 106 20 146 31C186 42 201 78 189 110C180 134 197 166 167 181C134 197 88 193 57 175C27 158 11 121 21 94C26 81 34 74 44 66Z"/></symbol>
+  </defs>
+</svg>
 
-  <main>
-    <section class="l-section" id="members">
-      <div class="l-container">
-        <div class="section-header js-reveal">
-          <span class="section-header__eyebrow">Members</span>
-          <h2 class="section-header__title">メンバー紹介</h2>
-          <p class="section-header__subtitle">クリックすると各メンバーの詳細ページへ移動します。</p>
-        </div>
+<!-- ===== HEADER（全ページ共通／このページは Members を current で強調） ===== -->
+<header class="header">
+  <a href="index.html" class="header__logo">
+    <img src="images/OPS-logo.png" alt="OPS">
+    <span class="tag"><b>OPS</b>Operations Team / NPO Dot-JP</span>
+  </a>
+  <nav class="gnav">
+    <ul class="gnav__list">
+      <li><a href="mission.html">Mission<span class="ja">存在意義</span></a></li>
+      <li><a href="members.html" class="current">Members<span class="ja">メンバー</span></a></li>
+      <li><a href="activities.html">Activities<span class="ja">活動</span></a></li>
+      <li><a href="works.html">Works<span class="ja">成果物</span></a></li>
+      <li><a href="future.html">Future<span class="ja">今後の方針</span></a></li>
+      <li><a href="contact.html">Contact<span class="ja">意見箱</span></a></li>
+    </ul>
+    <div class="gnav__cta">
+      <a href="contact.html">CONTACT<span class="ja">意見を送る</span></a>
+    </div>
+    <button class="gnav__btn" aria-label="メニュー"><span></span><span></span><span></span></button>
+  </nav>
+</header>
 
-        <div class="members__grid">
-          <a href="members/member01.html" class="member-card js-reveal js-reveal-delay-1">
-            <div class="member-card__photo">
-              <div class="member-card__photo-placeholder">👤</div>
-            </div>
-            <div class="member-card__info">
-              <p class="member-card__name">メンバー1</p>
-              <p class="member-card__role">役割</p>
-            </div>
-            <div class="member-card__arrow"><span>詳細を見る</span><span>→</span></div>
-          </a>
+<!-- ===== KV（ページ見出し帯） ===== -->
+<section class="page-kv">
+  <div class="guides" aria-hidden="true"><div class="guides__col"></div></div>
+  <svg class="blob b-lblue op-md sz-lg at-tl" viewBox="0 0 200 200" aria-hidden="true"><use href="#blobA"/></svg>
+  <svg class="blob b-pink op-md sz-sm at-br" viewBox="0 0 200 200" aria-hidden="true"><use href="#blobC"/></svg>
+  <div class="shooting-stars" aria-hidden="true">
+    <span class="star s1"></span><span class="star bl s2"></span><span class="star s3"></span>
+    <span class="star bl s4"></span><span class="star s5"></span>
+  </div>
+  <div class="marquee marquee--kv top" aria-hidden="true">
+    <div class="marquee__track">
+      <span>MEMBERS · PEOPLE · TEAM · OPS · PROFILE · FACES · </span>
+      <span>MEMBERS · PEOPLE · TEAM · OPS · PROFILE · FACES · </span>
+    </div>
+  </div>
+  <div class="marquee marquee--kv bottom rev" aria-hidden="true">
+    <div class="marquee__track">
+      <span>ENABLEMENT · TOGETHER · DOT-JP · OPS · TEAM · </span>
+      <span>ENABLEMENT · TOGETHER · DOT-JP · OPS · TEAM · </span>
+    </div>
+  </div>
+  <div class="container page-kv__inner">
+    <div class="page-kv__en">Members</div>
+    <div class="page-kv__jp">メンバー</div>
+    <div class="breadcrumb"><a href="index.html">HOME</a><span class="sep">▼</span><span>MEMBERS</span></div>
+  </div>
+</section>
 
-          <a href="members/member02.html" class="member-card js-reveal js-reveal-delay-2">
-            <div class="member-card__photo">
-              <div class="member-card__photo-placeholder">👤</div>
-            </div>
-            <div class="member-card__info">
-              <p class="member-card__name">メンバー2</p>
-              <p class="member-card__role">役割</p>
-            </div>
-            <div class="member-card__arrow"><span>詳細を見る</span><span>→</span></div>
-          </a>
+<!-- ===== メンバー一覧 ===== -->
+<section class="section">
+  <div class="guides" aria-hidden="true"><div class="guides__col"></div></div>
+  <div class="dot-field" aria-hidden="true"></div>
+  <svg class="blob b-lblue op-hi sz-lg at-tl" viewBox="0 0 200 200" aria-hidden="true"><use href="#blobB"/></svg>
+  <svg class="blob b-pink op-md sz-md at-br" viewBox="0 0 200 200" aria-hidden="true"><use href="#blobA"/></svg>
+  <div class="float-orbs" aria-hidden="true">
+    <span class="orb pk o1"></span><span class="orb bl o2"></span><span class="orb gr o3"></span>
+  </div>
+  <div class="shooting-stars" aria-hidden="true">
+    <span class="star s2"></span><span class="star bl s3"></span>
+  </div>
+  <div class="container">
+    <div class="ttl ttl--center reveal">
+      <span class="en">Our Members</span>
+      <span class="jp">OPSを動かす、<span class="hl">メンバーたち。</span></span>
+    </div>
+    <p class="lead lead--center reveal">カードをクリックすると、各メンバーの詳細プロフィールへ移動します。</p>
 
-          <a href="members/member03.html" class="member-card js-reveal js-reveal-delay-3">
-            <div class="member-card__photo">
-              <div class="member-card__photo-placeholder">👤</div>
-            </div>
-            <div class="member-card__info">
-              <p class="member-card__name">メンバー3</p>
-              <p class="member-card__role">役割</p>
-            </div>
-            <div class="member-card__arrow"><span>詳細を見る</span><span>→</span></div>
-          </a>
+    <div class="wash-field reveal d1">
 
-          <!-- 4番目：黒田晄平 -->
-          <a href="members/member04.html" class="member-card js-reveal js-reveal-delay-4">
-            <div class="member-card__photo">
-              <img src="images/ops_photo04.png" alt="黒田 晄平" />
-            </div>
-            <div class="member-card__info">
-              <p class="member-card__name">黒田 晄平</p>
-              <p class="member-card__role">宮崎支部 / アライアンス・事務局</p>
-            </div>
-            <div class="member-card__arrow"><span>詳細を見る</span><span>→</span></div>
-          </a>
+      <a class="wash reveal" href="members/member01.html" style="text-decoration:none">
+        <div class="wash__bloom" aria-hidden="true"></div>
+        <div class="wash__icon"><svg class="glyph" viewBox="0 0 24 24" role="img" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-6.5 8-6.5s8 2.5 8 6.5"/></svg></div>
+        <p class="wash__en">Member 01</p>
+        <h3 class="wash__title">メンバー1</h3>
+        <p class="wash__text">役割</p>
+        <div class="wash__tags"><span>詳細を見る →</span></div>
+      </a>
 
-          <a href="members/member05.html" class="member-card js-reveal js-reveal-delay-1">
-            <div class="member-card__photo">
-              <div class="member-card__photo-placeholder">👤</div>
-            </div>
-            <div class="member-card__info">
-              <p class="member-card__name">メンバー5</p>
-              <p class="member-card__role">役割</p>
-            </div>
-            <div class="member-card__arrow"><span>詳細を見る</span><span>→</span></div>
-          </a>
+      <a class="wash reveal" href="members/member02.html" style="text-decoration:none">
+        <div class="wash__bloom" aria-hidden="true"></div>
+        <div class="wash__icon"><svg class="glyph" viewBox="0 0 24 24" role="img" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-6.5 8-6.5s8 2.5 8 6.5"/></svg></div>
+        <p class="wash__en">Member 02</p>
+        <h3 class="wash__title">メンバー2</h3>
+        <p class="wash__text">役割</p>
+        <div class="wash__tags"><span>詳細を見る →</span></div>
+      </a>
 
-          <a href="members/member06.html" class="member-card js-reveal js-reveal-delay-2">
-            <div class="member-card__photo">
-              <div class="member-card__photo-placeholder">👤</div>
-            </div>
-            <div class="member-card__info">
-              <p class="member-card__name">メンバー6</p>
-              <p class="member-card__role">役割</p>
-            </div>
-            <div class="member-card__arrow"><span>詳細を見る</span><span>→</span></div>
-          </a>
+      <a class="wash reveal" href="members/member03.html" style="text-decoration:none">
+        <div class="wash__bloom" aria-hidden="true"></div>
+        <div class="wash__icon"><svg class="glyph" viewBox="0 0 24 24" role="img" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-6.5 8-6.5s8 2.5 8 6.5"/></svg></div>
+        <p class="wash__en">Member 03</p>
+        <h3 class="wash__title">メンバー3</h3>
+        <p class="wash__text">役割</p>
+        <div class="wash__tags"><span>詳細を見る →</span></div>
+      </a>
 
-        </div>
+      <a class="wash reveal" href="members/member04.html" style="text-decoration:none">
+        <div class="wash__bloom" aria-hidden="true"></div>
+        <div class="wash__icon"><img src="images/ops_photo04.png" alt="黒田 晄平" style="width:74px;height:74px;border-radius:50%;object-fit:cover"></div>
+        <p class="wash__en">Member 04</p>
+        <h3 class="wash__title">黒田 晄平</h3>
+        <p class="wash__text">宮崎支部 / アライアンス・事務局</p>
+        <div class="wash__tags"><span>詳細を見る →</span></div>
+      </a>
+
+      <a class="wash reveal" href="members/member05.html" style="text-decoration:none">
+        <div class="wash__bloom" aria-hidden="true"></div>
+        <div class="wash__icon"><svg class="glyph" viewBox="0 0 24 24" role="img" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-6.5 8-6.5s8 2.5 8 6.5"/></svg></div>
+        <p class="wash__en">Member 05</p>
+        <h3 class="wash__title">メンバー5</h3>
+        <p class="wash__text">役割</p>
+        <div class="wash__tags"><span>詳細を見る →</span></div>
+      </a>
+
+      <a class="wash reveal" href="members/member06.html" style="text-decoration:none">
+        <div class="wash__bloom" aria-hidden="true"></div>
+        <div class="wash__icon"><svg class="glyph" viewBox="0 0 24 24" role="img" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-6.5 8-6.5s8 2.5 8 6.5"/></svg></div>
+        <p class="wash__en">Member 06</p>
+        <h3 class="wash__title">メンバー6</h3>
+        <p class="wash__text">役割</p>
+        <div class="wash__tags"><span>詳細を見る →</span></div>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===== CTA ===== -->
+<section class="section cta-band">
+  <div class="marquee marquee--cta r1" aria-hidden="true"><div class="marquee__track">
+    <span>YOUR VOICE · YOUR IDEAS · WE'RE LISTENING · SHARE YOUR THOUGHTS · FEEDBACK · </span>
+    <span>YOUR VOICE · YOUR IDEAS · WE'RE LISTENING · SHARE YOUR THOUGHTS · FEEDBACK · </span>
+  </div></div>
+  <div class="marquee marquee--cta r2" aria-hidden="true"><div class="marquee__track">
+    <span>TELL US ANYTHING · YOUR OPINION MATTERS · IDEAS WELCOME · </span>
+    <span>TELL US ANYTHING · YOUR OPINION MATTERS · IDEAS WELCOME · </span>
+  </div></div>
+  <div class="marquee marquee--cta r3" aria-hidden="true"><div class="marquee__track">
+    <span>SPEAK UP · WE HEAR YOU · YOUR VOICE · FEEDBACK · IDEAS · </span>
+    <span>SPEAK UP · WE HEAR YOU · YOUR VOICE · FEEDBACK · IDEAS · </span>
+  </div></div>
+  <div class="shooting-stars" aria-hidden="true">
+    <span class="star s1"></span><span class="star bl s4"></span>
+  </div>
+  <div class="container cta-band__inner">
+    <span class="en">Join Us!</span>
+    <h2>このチームに、興味を持ってくれた方へ。</h2>
+    <p style="white-space:nowrap">気になることがあれば、お気軽にメッセージをどうぞ。</p>
+    <div class="cta-band__btns">
+      <a href="contact.html" class="btn btn--grad">意見を送る<span class="arrow">→</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER（全ページ共通） ===== -->
+<footer class="footer">
+  <div class="guides" aria-hidden="true"><div class="guides__col"></div></div>
+  <div class="shooting-stars" aria-hidden="true">
+    <span class="star s2"></span><span class="star bl s4"></span>
+  </div>
+  <div class="container">
+    <div class="footer__top">
+      <div class="footer__brand">
+        <img src="images/OPS-logo.png" alt="OPS">
+        <p>OPS（Operations）は、NPO法人ドットジェイピーの運営を仕組み化する横断チームです。AIとITで、人がやるべき仕事に時間を使える組織をつくります。</p>
       </div>
-    </section>
-  </main>
+      <div class="footer__col">
+        <h4>Menu</h4>
+        <a href="mission.html">Mission / 存在意義</a>
+        <a href="members.html">Members / メンバー</a>
+        <a href="activities.html">Activities / 活動</a>
+        <a href="works.html">Works / 成果物</a>
+        <a href="future.html">Future / 今後の方針</a>
+        <a href="contact.html">Contact / 意見箱</a>
+      </div>
+      <div class="footer__col">
+        <h4>Team</h4>
+        <span class="dim">NPO法人ドットジェイピー</span>
+        <span class="dim">2026年4月 正式始動</span>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span class="copy">© 2026 OPS — Operations Team, NPO Dot-JP</span>
+      <span>AIとITで、運営をアップデートする。</span>
+    </div>
+  </div>
+</footer>
 
-  <script src="js/main-kouhei.js"></script>
+<script src="js/main-leandro.js"></script>
 </body>
 </html>
