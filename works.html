@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>成果物｜OPS — Operations Team</title>
-<meta name="description" content="OPSがこれまでに作ってきた成果物。勤怠集計の自動化、申請フローのテンプレート、業務ダッシュボード、社内ナレッジベース、データ整形スクリプトなど。">
+<meta name="description" content="OPSの成果物。運用中のDiscord×Googleカレンダー自動連携システム・単語帳GPTs・このホームページに加え、社内SNSアプリや業務構造改革などの構想を紹介します。">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
@@ -54,14 +54,14 @@
   </div>
   <div class="marquee marquee--kv top" aria-hidden="true">
     <div class="marquee__track">
-      <span>WORKS · AUTOMATION · DASHBOARD · TEMPLATE · KNOWLEDGE · RESULTS · </span>
-      <span>WORKS · AUTOMATION · DASHBOARD · TEMPLATE · KNOWLEDGE · RESULTS · </span>
+      <span>WORKS · AUTOMATION · CALENDAR · GPTS · WEBSITE · RESULTS · </span>
+      <span>WORKS · AUTOMATION · CALENDAR · GPTS · WEBSITE · RESULTS · </span>
     </div>
   </div>
   <div class="marquee marquee--kv bottom rev" aria-hidden="true">
     <div class="marquee__track">
-      <span>EFFICIENCY · IMPACT · TOOLS · SCRIPT · DOT-JP · OPS · </span>
-      <span>EFFICIENCY · IMPACT · TOOLS · SCRIPT · DOT-JP · OPS · </span>
+      <span>IN OPERATION · IN THE WORKS · IDEAS · DOT-JP · OPS · </span>
+      <span>IN OPERATION · IN THE WORKS · IDEAS · DOT-JP · OPS · </span>
     </div>
   </div>
   <div class="container page-kv__inner">
@@ -87,14 +87,14 @@
     <div class="intro reveal deco-host">
       <div class="ttl ttl--center">
         <span class="en">Our Works</span>
-        <span class="jp">つくったもの、<span class="hl">効いたこと。</span></span>
+        <span class="jp">動かしているもの、<span class="hl">これから形にするもの。</span></span>
       </div>
-      <p class="lead lead--center">OPSがこれまでに作ってきた、業務を効率化するための仕組みやツールを紹介します。それぞれが実際の業務でどんな効果を生んだかも添えています。</p>
+      <p class="lead lead--center">2026年4月に始動したOPSが、この数ヶ月で実際に作って動かしているツールと、いま構想を進めている取り組みを紹介します。<strong>すでに使われているもの</strong>と<strong>これからのアイデア</strong>を分けて掲載しています。</p>
     </div>
   </div>
 </section>
 
-<!-- ===== 成果物一覧 ===== -->
+<!-- ===== ① 運用中の成果物 ===== -->
 <section class="section section--soft">
   <div class="guides" aria-hidden="true"><div class="guides__col"></div></div>
   <div class="dot-field" aria-hidden="true"></div>
@@ -106,62 +106,212 @@
   </div>
   <div class="marquee marquee--sec top rev" aria-hidden="true">
     <div class="marquee__track">
-      <span>AUTOMATION · TEMPLATE · DASHBOARD · KNOWLEDGE · SCRIPT · </span>
-      <span>AUTOMATION · TEMPLATE · DASHBOARD · KNOWLEDGE · SCRIPT · </span>
+      <span>IN OPERATION · CALENDAR · GPTS · WEBSITE · RUNNING NOW · </span>
+      <span>IN OPERATION · CALENDAR · GPTS · WEBSITE · RUNNING NOW · </span>
     </div>
   </div>
   <div class="container">
     <div class="ttl ttl--center reveal">
-      <span class="en">What We Built</span>
-      <span class="jp">業務を前に進めた、<span class="hl">5つの成果物。</span></span>
+      <span class="en">In Operation</span>
+      <span class="jp">すでに動いている、<span class="hl">3つの成果物。</span></span>
     </div>
-    <p class="lead lead--center reveal">どれも「面倒」を起点に生まれた、小さくて効くツールたちです。</p>
+    <p class="lead lead--center reveal">どれも「面倒」を起点に生まれ、今まさにチームで使われているものです。</p>
 
     <div class="wash-field reveal d1">
 
+      <!-- 01 カレンダー自動連携 -->
       <div class="wash reveal">
         <div class="wash__bloom" aria-hidden="true"></div>
-        <div class="wash__icon"><svg class="glyph" viewBox="0 0 24 24" role="img" aria-hidden="true"><circle cx="12" cy="12.5" r="7.5"/><path d="M12 8.5v4l2.5 2"/><path d="M9 2.5h6"/></svg></div>
-        <p class="wash__en">Automation</p>
-        <h3 class="wash__title">勤怠集計の自動化ツール</h3>
-        <p class="wash__text">これまで手作業で行っていた月末の勤怠集計を、自動で計算・出力する仕組みに置き換えました。</p>
-        <div class="wash__tags"><span>効果：集計時間を約80%削減</span></div>
+        <span class="wash__badge live">✅ 運用中</span>
+        <div class="wash__icon"><svg class="glyph" viewBox="0 0 24 24" role="img" aria-hidden="true"><rect x="3" y="4.5" width="18" height="16" rx="2.5"/><path d="M3 9h18"/><path d="M8 2.5v4M16 2.5v4"/><path d="M11 13l1.5 1.5L16 11"/></svg></div>
+        <p class="wash__en">Calendar Automation</p>
+        <h3 class="wash__title">Discord×Googleカレンダー 自動連携システム</h3>
+        <p class="wash__text">研修・会議・締め切りの予定をひとつにまとめた「全社カレンダー」。Discordに投稿された予定が自動で登録されるので、あなたは<strong>カレンダーを見るだけ</strong>。予定はひとりでに集まってきます。</p>
+        <div class="wash__tags"><span>自作・稼働中</span><span>見るだけでOK</span><span>月数百円で運用</span></div>
+        <a href="#calendar-detail" class="btn btn--outline wash__cta">全社カレンダーをくわしく見る<span class="arrow">→</span></a>
       </div>
 
+      <!-- 04 単語帳GPTs -->
       <div class="wash reveal">
         <div class="wash__bloom" aria-hidden="true"></div>
-        <div class="wash__icon"><svg class="glyph" viewBox="0 0 24 24" role="img" aria-hidden="true"><path d="M6 3h9l3 3v15H6z"/><path d="M14.5 3v3.5H18"/><path d="M9 12h6M9 15h4"/><path d="M9 9h2"/></svg></div>
-        <p class="wash__en">Template</p>
-        <h3 class="wash__title">申請フローのテンプレート</h3>
-        <p class="wash__text">バラバラだった各種申請の様式と承認ルートを統一し、誰でも迷わず申請できるようにしました。</p>
-        <div class="wash__tags"><span>効果：差し戻しが大幅に減少</span></div>
-      </div>
-
-      <div class="wash reveal">
-        <div class="wash__bloom" aria-hidden="true"></div>
-        <div class="wash__icon"><svg class="glyph" viewBox="0 0 24 24" role="img" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2.5"/><path d="M7 15v-3M11 15V9M15 15v-5M19 15v-2" stroke-linecap="round"/></svg></div>
-        <p class="wash__en">Dashboard</p>
-        <h3 class="wash__title">業務ダッシュボード</h3>
-        <p class="wash__text">複数の場所に散らばっていた主要な数値を、一つの画面でまとめて確認できるようにしました。</p>
-        <div class="wash__tags"><span>効果：状況把握がひと目で</span></div>
-      </div>
-
-      <div class="wash reveal">
-        <div class="wash__bloom" aria-hidden="true"></div>
+        <span class="wash__badge live">✅ 運用中</span>
         <div class="wash__icon"><svg class="glyph" viewBox="0 0 24 24" role="img" aria-hidden="true"><path d="M5 4.5h11a2 2 0 0 1 2 2V20l-3-2H5z"/><path d="M8 9h7M8 12h5"/><circle cx="17.5" cy="6.5" r="3.5"/><path d="M20 9l2.5 2.5" stroke-linecap="round"/></svg></div>
-        <p class="wash__en">Knowledge</p>
-        <h3 class="wash__title">社内ナレッジベース</h3>
-        <p class="wash__text">よくある質問と作業手順をまとめた社内向けのページ。「これどうやるの？」をすぐ解決できます。</p>
-        <div class="wash__tags"><span>効果：問い合わせ対応を削減</span></div>
+        <p class="wash__en">Glossary GPTs</p>
+        <h3 class="wash__title">ドットジェイピー単語帳GPTs</h3>
+        <p class="wash__text">活動を始めたばかりの頃に出てくる用語（「AGって何？」「RPって？」など）を、ChatGPT上でその場で質問できるツールです。新スタッフが言葉の壁でつまずきにくくなります。</p>
+        <div class="wash__tags"><span>新人サポート</span><span>クレジット：単語帳本体＝プログラムユニット作成／GPTs化＝OPS</span></div>
+        <a href="https://chatgpt.com/g/g-6a23ce129e6881919b8d526dd6a02544-totutosieihidan-yu-zhang" target="_blank" rel="noopener" class="btn btn--outline wash__cta">単語帳GPTsを開く<span class="arrow">→</span></a>
       </div>
 
+      <!-- 06 このホームページ -->
       <div class="wash reveal">
         <div class="wash__bloom" aria-hidden="true"></div>
+        <span class="wash__badge live">✅ 運用中</span>
         <div class="wash__icon"><svg class="glyph" viewBox="0 0 24 24" role="img" aria-hidden="true"><path d="M9 8l-4 4 4 4M15 8l4 4-4 4" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-        <p class="wash__en">Script</p>
-        <h3 class="wash__title">データ整形スクリプト</h3>
-        <p class="wash__text">形式がバラバラなデータを、決まった形に自動で整える小さなツール。手直しの手間をなくします。</p>
-        <div class="wash__tags"><span>効果：手作業のミスを防止</span></div>
+        <p class="wash__en">This Website</p>
+        <h3 class="wash__title">このOPS紹介ホームページ</h3>
+        <p class="wash__text">いま見ているこのサイトも、OPSの成果物のひとつです。メンバー3人がGitHubで共同編集し、自分たちでデザインを統一して公開・運用しています。チームで「作って公開する」を実際にやり切りました。</p>
+        <div class="wash__tags"><span>3人で共同制作</span><span>GitHubで運用</span><span>公開中</span></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===== 目玉：全社カレンダー（メイン＝購読のうながし／おまけ＝仕組み） ===== -->
+<section class="section" id="calendar-detail">
+  <div class="guides" aria-hidden="true"><div class="guides__col"></div></div>
+  <div class="float-orbs" aria-hidden="true">
+    <span class="orb pk o1"></span><span class="orb bl o2"></span><span class="orb gr o3"></span>
+  </div>
+  <div class="shooting-stars" aria-hidden="true">
+    <span class="star s1"></span><span class="star bl s3"></span>
+  </div>
+  <div class="container">
+    <div class="ttl ttl--center reveal">
+      <span class="en">Company Calendar</span>
+      <span class="jp">全社カレンダー、<span class="hl">使ってみませんか？</span></span>
+    </div>
+    <p class="lead lead--center reveal">研修・会議・締め切りなどの予定を、ひとつにまとめたGoogleカレンダーです。「あの研修いつだっけ？」「締め切りは？」が、<strong>このカレンダーを見るだけ</strong>で分かります。いちばんのポイントは、<strong>Discordに投稿された予定が自動で登録される</strong>こと。あなたは見るだけで、予定はひとりでに集まってきます。</p>
+
+    <div class="ba reveal d1">
+      <div class="ba__card before">
+        <p class="ba__label">Before — これまで</p>
+        <ul>
+          <li>予定がDiscordの投稿に埋もれて見落とす</li>
+          <li>手作業でカレンダー登録 → 忘れる・後回しになる</li>
+          <li>締め切りがバラバラで把握しづらい</li>
+        </ul>
+      </div>
+      <div class="ba__arrow" aria-hidden="true">→</div>
+      <div class="ba__card after">
+        <p class="ba__label">After — これから</p>
+        <ul>
+          <li>カレンダーを見るだけで、全社の予定が一覧に</li>
+          <li>Discordの投稿から自動で登録</li>
+          <li>締め切りも時刻つきで自動表示</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="infobox reveal d2">
+      <p class="infobox__head">カレンダーに入るとこんな感じ</p>
+      <ul>
+        <li>予定（研修・会議）と締め切りを<strong>色分け</strong>（予定＝青緑／締め切り＝赤）</li>
+        <li>締め切りは時刻まで表示（例：「【締切】会費振込（6/20 23:59）」）</li>
+        <li>通知（リマインダー）は<strong>自分好みに設定OK</strong>。いつ通知するか（1週間前・前日・当日など）は、各自がGoogleカレンダー側で自由に設定・オフできます</li>
+        <li>説明欄に概要・関連リンク・元のDiscord投稿へのリンクも自動で添付</li>
+      </ul>
+    </div>
+
+    <div class="subscribe reveal d2">
+      <p class="subscribe__lead">👉 使い方はかんたん ― 全社カレンダーを自分のGoogleカレンダーに登録（購読）するだけ。</p>
+      <p class="subscribe__note">あとは予定が自動で集まってくるので、毎日のチェックに使ってください。<br>（登録用リンク・手順は別途ご案内します）</p>
+    </div>
+
+    <!-- おまけ：仕組み（興味がある人だけ展開） -->
+    <details class="disclosure reveal">
+      <summary>🤖 どうやって自動で動いてるの？（気になる人だけどうぞ）<span class="mk" aria-hidden="true">+</span></summary>
+      <div class="disclosure__body">
+        <p class="lead" style="text-align:left;margin:6px 0 24px">ざっくり言うと「<strong>AI × 人のチェック</strong>」で動いています。AIが下書きを作り、人が最終確認してから登録する流れで、AIまかせにしないのがポイントです。</p>
+
+        <div class="flow">
+          <div class="flow__step">
+            <span class="flow__num">1</span>
+            <h3 class="flow__title">見回り（スキャン）</h3>
+            <p class="flow__text">全社サーバーの主要チャンネル（全社重要事項・各種依頼など）を、毎朝まとめてチェックします。</p>
+          </div>
+          <div class="flow__step">
+            <span class="flow__num">2</span>
+            <h3 class="flow__title">AIが読み取る</h3>
+            <p class="flow__text">投稿の文章をAI（Claude）が読み、「研修の予定」「提出の締め切り」と判断。日時・タイトル・概要・関連URLを自動で整理します。</p>
+          </div>
+          <div class="flow__step">
+            <span class="flow__num">3</span>
+            <h3 class="flow__title">人の目で承認</h3>
+            <p class="flow__text">いきなりは登録しません。承認用チャンネルに「これで登録していい？」と表示され、opsメンバーが確認して✅を押したものだけが登録されます。</p>
+          </div>
+          <div class="flow__step">
+            <span class="flow__num">4</span>
+            <h3 class="flow__title">カレンダーに自動登録</h3>
+            <p class="flow__text">承認されると全社カレンダーへ自動登録（色分け・時刻表示・元投稿リンクつき）。</p>
+          </div>
+        </div>
+
+        <div class="infobox" style="margin-top:32px">
+          <p class="infobox__head">さらに細かい工夫</p>
+          <ul>
+            <li><strong>二度処理しない</strong>：一度読み取った投稿は記録し、同じ投稿を重複登録しません</li>
+            <li><strong>過去の予定は自動で除外</strong>：もう終わった日付は登録しません</li>
+            <li><strong>止まっていても大丈夫</strong>：動いていない間に押された承認も、翌朝まとめて反映</li>
+            <li><strong>承認のし忘れ防止</strong>：未対応の承認待ちには、リマインドのお知らせが届きます</li>
+          </ul>
+        </div>
+
+        <p class="lead lead--center" style="margin:32px 0 14px">使っている技術（興味がある人向け）</p>
+        <div class="techtags">
+          <span>Discord Bot</span><span>Claude API</span><span>Google Calendar API</span>
+        </div>
+        <p class="lead lead--center" style="margin-top:18px">費用はAIの利用料（<strong>月あたり数百円程度</strong>）のみ。ほかはすべて無料の範囲で運用しています。</p>
+      </div>
+    </details>
+  </div>
+</section>
+
+<!-- ===== ② 構想中の取り組み ===== -->
+<section class="section section--blue">
+  <div class="float-orbs" aria-hidden="true">
+    <span class="orb pk o1"></span><span class="orb bl o2"></span>
+  </div>
+  <div class="shooting-stars" aria-hidden="true">
+    <span class="star s1"></span><span class="star bl s3"></span><span class="star s5"></span>
+  </div>
+  <div class="marquee marquee--sec top rev" aria-hidden="true">
+    <div class="marquee__track">
+      <span>IN THE WORKS · IDEAS · SNS · DX · STRUCTURE · NEXT · </span>
+      <span>IN THE WORKS · IDEAS · SNS · DX · STRUCTURE · NEXT · </span>
+    </div>
+  </div>
+  <div class="container">
+    <div class="ttl ttl--center reveal">
+      <span class="en">In the Works</span>
+      <span class="jp">これから形にしたい、<span class="hl">3つの構想。</span></span>
+    </div>
+    <p class="lead lead--center reveal">まだ完成していない、検討・準備を進めている段階のアイデアです。</p>
+
+    <div class="wash-field reveal d1">
+
+      <!-- 02 社内SNSアプリ -->
+      <div class="wash reveal">
+        <div class="wash__bloom" aria-hidden="true"></div>
+        <span class="wash__badge plan">💡 構想中</span>
+        <div class="wash__icon"><svg class="glyph" viewBox="0 0 24 24" role="img" aria-hidden="true"><path d="M5 6h14v9H9l-3 3v-3H5z"/><path d="M8.5 10h7M8.5 12.5h4"/></svg></div>
+        <p class="wash__en">Internal SNS</p>
+        <h3 class="wash__title">ドットジェイピー社内SNSアプリ（仮称）</h3>
+        <p class="wash__text">全国のスタッフが支部・エリアを越えてつながり、活動報告・称賛・ナレッジ・音声発信ができる社内専用SNSを作りたいという構想です。バラバラに分散した情報と熱量を、ひとつの場に蓄積することを目指しています。</p>
+        <div class="wash__tags"><span>横のつながり強化</span><span>まずは身内で試作を検討</span></div>
+      </div>
+
+      <!-- 03 外部企業連携によるDX -->
+      <div class="wash reveal">
+        <div class="wash__bloom" aria-hidden="true"></div>
+        <span class="wash__badge plan">💡 構想中</span>
+        <div class="wash__icon"><svg class="glyph" viewBox="0 0 24 24" role="img" aria-hidden="true"><path d="M10 14a3.5 3.5 0 0 0 5 0l3-3a3.5 3.5 0 0 0-5-5l-1 1"/><path d="M14 10a3.5 3.5 0 0 0-5 0l-3 3a3.5 3.5 0 0 0 5 5l1-1"/></svg></div>
+        <p class="wash__en">DX Partnership</p>
+        <h3 class="wash__title">外部企業との連携によるDX・業務効率化</h3>
+        <p class="wash__text">自分たちで作るシステムに加え、外部の専門企業とも連携しながら、組織全体の業務効率化を進めることを検討しています。ナレッジの集約・横断検索や、問い合わせ対応の効率化などをテーマに準備を進めています。</p>
+        <div class="wash__tags"><span>専門企業と検討中</span><span>今できる範囲から</span></div>
+      </div>
+
+      <!-- 05 業務構造改革提案 -->
+      <div class="wash reveal">
+        <div class="wash__bloom" aria-hidden="true"></div>
+        <span class="wash__badge plan">💡 構想中</span>
+        <div class="wash__icon"><svg class="glyph" viewBox="0 0 24 24" role="img" aria-hidden="true"><rect x="3.5" y="3.5" width="7" height="7" rx="1.5"/><rect x="13.5" y="3.5" width="7" height="7" rx="1.5"/><rect x="3.5" y="13.5" width="7" height="7" rx="1.5"/><rect x="13.5" y="13.5" width="7" height="7" rx="1.5"/></svg></div>
+        <p class="wash__en">Structure Reform</p>
+        <h3 class="wash__title">Salesforce起点の 業務構造改革提案</h3>
+        <p class="wash__text">情報が複数システムに分散している現状を見直し、「現場の業務を一度行えば、記録・共有・通知が自動で完了する」仕組みへ作り変えようという提案です。核にあるのは <strong>「問題は『人』ではなく『構造』にある」</strong> という考え方です。</p>
+        <div class="wash__tags"><span>OPSからの提案</span><span>段階的なロードマップ</span></div>
       </div>
 
     </div>
