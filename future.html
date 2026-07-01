@@ -22,6 +22,52 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style-leandro.css">
+<!-- ▼ このページ限定スタイル（共通 style-leandro.css は変更しない）：5つの方針カードの右に「水たまり画像」を並べる -->
+<style>
+  :root{ --puddle-easing:cubic-bezier(.22,1,.36,1); }
+  /* 水たまり画像本体：不定形に変形＋スクロール登場＋上下パララックス */
+  .puddle{position:relative;overflow:hidden;
+    border-radius:60% 40% 50% 50%/55% 45% 55% 45%;
+    box-shadow:0 18px 42px rgba(0,57,83,.20);
+    opacity:0;transform:translateY(var(--py,0)) scale(.9);
+    transition:opacity 1.2s var(--puddle-easing),transform 1.4s var(--puddle-easing);
+    will-change:transform;animation:puddle-morph 22s ease-in-out infinite;z-index:1}
+  .puddle.is-in{opacity:1;transform:translateY(var(--py,0)) scale(1)}
+  .puddle img{display:block;width:100%;height:clamp(150px,12.5vw,186px);
+    object-fit:cover;transform:scale(1.18);
+    transition:transform 1.9s var(--puddle-easing);will-change:transform}
+  .puddle.is-in img{transform:scale(1.05)}
+  /* 各カードの水たまりを「連動させず」バラバラに変形させる（速度＋位相をずらす） */
+  #policy-field .wash:nth-child(1) .puddle{animation-duration:19s;animation-delay:-3s}
+  #policy-field .wash:nth-child(2) .puddle{animation-duration:25s;animation-delay:-11s}
+  #policy-field .wash:nth-child(3) .puddle{animation-duration:21s;animation-delay:-7s}
+  #policy-field .wash:nth-child(4) .puddle{animation-duration:27s;animation-delay:-16s}
+  #policy-field .wash:nth-child(5) .puddle{animation-duration:23s;animation-delay:-5s}
+  @keyframes puddle-morph{
+    0%,100%{border-radius:60% 40% 50% 50%/55% 45% 55% 45%}
+    20%{border-radius:34% 66% 62% 38%/40% 35% 65% 60%}
+    40%{border-radius:55% 45% 32% 68%/66% 60% 40% 34%}
+    60%{border-radius:38% 62% 58% 42%/35% 62% 38% 65%}
+    80%{border-radius:66% 34% 45% 55%/58% 40% 60% 42%}
+  }
+  /* 広い画面：画像は本文（2列目）の下に右寄せで配置。
+     重ねずに通常の並びにし、画像の上下のすき間を均等（margin:14px 0）にする */
+  @media (min-width:820px){
+    #policy-field{max-width:1140px}
+    /* カードの上下余白を 0 に（=カード間のすき間をなくす） */
+    #policy-field .wash{max-width:none;padding-top:0;padding-bottom:0}
+    /* 画像位置：margin-top で上下（小さいほど下）、margin-right で左右（大きいほど左）を微調整 */
+    #policy-field .wash .puddle{grid-column:2;justify-self:end;width:292px;margin:-45px 30px 0 0}
+  }
+  /* 狭い画面：画像はカード下に回り込み、中央寄せ */
+  @media (max-width:819px){
+    #policy-field .wash .puddle{grid-column:1 / -1;max-width:300px;margin:16px auto 0}
+  }
+  @media (prefers-reduced-motion: reduce){
+    .puddle{animation:none;transition:opacity .4s linear}
+    .puddle img{transition:none}
+  }
+</style>
 </head>
 <body>
 
@@ -156,9 +202,9 @@
       <span class="en">Our Direction</span>
       <span class="jp">OPSが進める、<span class="hl">5つの方針。</span></span>
     </div>
-    <p class="lead lead--center reveal">順番ではなく、どれも同時に育てていく5つの方針です。にじみ合うように、組織全体を少しずつ前へ。</p>
+    <p class="lead lead--center reveal">組織全体を前へ進ませるために、大きく５つの方針を進めます。</p>
 
-    <div class="wash-field reveal d1">
+    <div class="wash-field reveal d1" id="policy-field">
 
       <div class="wash reveal">
         <div class="wash__bloom" aria-hidden="true"></div>
@@ -167,6 +213,7 @@
         <h3 class="wash__title">全社カレンダーの定着・拡張</h3>
         <p class="wash__text">全社のイベント・会議・締切を、ひとつのカレンダーに集約。部署や立場を越えて同じ予定を共有でき、伝達漏れを防ぎます。今後はリマインドや出欠管理へと運用を広げます。</p>
         <div class="wash__tags"><span>全社予定</span><span>情報の一元化</span></div>
+        <div class="puddle"><img src="images/学生カレンダー.png" alt="学生カレンダーのイメージ"></div>
       </div>
 
       <div class="wash reveal">
@@ -176,6 +223,7 @@
         <h3 class="wash__title">ポータル／学生管理システム</h3>
         <p class="wash__text">バラバラのツールや資料を、ひとつの入り口にまとめます。あわせて学生管理システムを開発し、参加状況や連絡先も一元管理。「どこを見ればいいか分からない」を解消します。</p>
         <div class="wash__tags"><span>学生管理</span><span>ポータル</span></div>
+        <div class="puddle"><img src="images/ポータルイメージ.png" alt="ポータル／学生管理システムのイメージ"></div>
       </div>
 
       <div class="wash reveal">
@@ -185,6 +233,7 @@
         <h3 class="wash__title">社内LLM・RAGのナレッジ基盤</h3>
         <p class="wash__text">社内LLM・RAGで、過去の資料やノウハウを自然な言葉ですぐ検索できる基盤をつくります。属人化をなくし、新メンバーの立ち上がりや引き継ぎをスムーズにします。</p>
         <div class="wash__tags"><span>社内LLM</span><span>引き継ぎもスムーズ</span></div>
+        <div class="puddle"><img src="images/たのしそうな人たち.png" alt="ナレッジを活用する、たのしそうな人たち"></div>
       </div>
 
       <div class="wash reveal">
@@ -194,6 +243,7 @@
         <h3 class="wash__title">自動化とスタッフ向けAI研修</h3>
         <p class="wash__text">自動リマインドや定型作業の自動化で、ミスと手間を削減します。あわせてスタッフ向けのAI研修を実施し、組織全体のリテラシーを底上げします。</p>
         <div class="wash__tags"><span>自動リマインド</span><span>AI研修</span></div>
+        <div class="puddle"><img src="images/スタッフ向けAI研修.png" alt="スタッフ向けAI研修のイメージ"></div>
       </div>
 
       <div class="wash reveal">
@@ -201,7 +251,7 @@
         <div class="wash__icon"><svg class="glyph" viewBox="0 0 24 24" role="img" aria-hidden="true"><path d="M12 2.5c3 2 4.5 5.2 4.5 9 0 1.8-.4 3.4-1 4.8H8.5c-.6-1.4-1-3-1-4.8 0-3.8 1.5-7 4.5-9z"/><circle cx="12" cy="9.5" r="1.6"/><path d="M8.5 16.3 6 19.5l3.2-1M15.5 16.3 18 19.5l-3.2-1"/><path d="M10.5 19.5c.5 1 1.5 2 1.5 2s1-1 1.5-2"/></svg></div>
         <p class="wash__en">Future Stack</p>
         <h3 class="wash__title">将来構想 — 次の業務基盤へ</h3>
-        <p class="wash__text">Salesforceに代わる、OPS独自の管理基盤を構想しています。これまでの資産も活かしながら、数年先を見据えた持続可能な仕組みを目指します。</p>
+        <p class="wash__text">Salesforceに代わる、OPS独自の管理基盤を構想しています。これまでの資産も活かしながら、数年先を見据えた皆さんが便利だと思うツール開発や仕組みを目指します。</p>
         <div class="wash__tags"><span>独自基盤</span><span>NFT活用</span></div>
       </div>
 
@@ -298,5 +348,40 @@
 </footer>
 
 <script src="js/main-leandro.js"></script>
+<!-- ▼ このページ限定スクリプト（共通 main-leandro.js は変更しない）：水たまり画像の登場＆パララックス -->
+<script>
+(function () {
+  'use strict';
+  var puddles = [].slice.call(document.querySelectorAll('.puddle'));
+  if (!puddles.length) return;
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  // 1) 登場：画面に入ったら .is-in
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function (es) {
+      es.forEach(function (e) {
+        if (e.isIntersecting) { e.target.classList.add('is-in'); io.unobserve(e.target); }
+      });
+    }, { threshold: 0.2 });
+    puddles.forEach(function (p) { io.observe(p); });
+  } else {
+    puddles.forEach(function (p) { p.classList.add('is-in'); });
+  }
+
+  // 2) パララックス（reduced-motion ではスキップ）
+  if (reduce) return;
+  function frame() {
+    var vh = window.innerHeight;
+    for (var i = 0; i < puddles.length; i++) {
+      var p = puddles[i], r = p.getBoundingClientRect();
+      if (r.bottom < -100 || r.top > vh + 100) continue;
+      var off = ((r.top + r.height / 2) - vh / 2) / vh;
+      p.style.setProperty('--py', (off * -28).toFixed(1) + 'px');
+    }
+    requestAnimationFrame(frame);
+  }
+  requestAnimationFrame(frame);
+})();
+</script>
 </body>
 </html>
